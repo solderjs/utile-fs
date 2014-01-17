@@ -30,7 +30,9 @@
             return cb(err);
           }
 
-          fs.utimes(dst, stat.atime, stat.mtime, cb);
+          fs.utimes(dst, stat.atime, stat.mtime, function() {
+              fs.chmod(dst, stat.mode, cb);
+          } );
         });
       });
     }
