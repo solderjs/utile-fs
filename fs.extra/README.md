@@ -37,7 +37,7 @@ fs.copy('foo.txt', 'bar.txt', { replace: false }, function (err) {
     throw err;
   }
 
-  console.log("Copied 'foo.txt' to 'bar.txt');
+  console.log("Copied 'foo.txt' to 'bar.txt'");
 });
 ```
 
@@ -54,7 +54,7 @@ fs.copyRecursive('./foo', './bar', function (err) {
     throw err;
   }
 
-  console.log("Copied './foo' to './bar');
+  console.log("Copied './foo' to './bar'");
 });
 ```
 
@@ -101,7 +101,7 @@ fs.move('foo.txt', 'bar.txt', function (err) {
     throw err;
   }
 
-  console.log("Moved 'foo.txt' to 'bar.txt');
+  console.log("Moved 'foo.txt' to 'bar.txt'");
 });
 ```
 
