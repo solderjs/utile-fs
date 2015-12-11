@@ -8,7 +8,12 @@
     , path = require('path')
     ;
 
-  function run(src, dst, cb) {
+  function run(src, dst, opts, cb) {
+     // the 'opts' property is not required, so check if it is set
+    if (typeof opts !== 'object') {
+      cb = opts;
+      opts = {};
+    }
 
     function syncDirs(cb, src, dst) {
       var walker = fsWalk(src)
@@ -35,7 +40,7 @@
           , newFile = path.join(dst, root.substr(src.length + 1), stat.name)
           ;
 
-        fsCopy(curFile, newFile, function (err) {
+        fsCopy(curFile, newFile, opts, function (err) {
           if (err) {
             cb(err);
             return;
