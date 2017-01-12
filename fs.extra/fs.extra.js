@@ -30,8 +30,10 @@
   // Alias
   fs.rmrf = extraFs.remove;
   fs.rmrfSync = extraFs.removeSync;
-  fs.rmRecursive = extraFs.rmrf;
-  fs.rmRecursiveSync = extraFs.rmrfSync;
+  fs.rmRecursive = extraFs.remove;
+  fs.rmRecursiveSync = extraFs.removeSync;
+  fs.removeRecursive = extraFs.remove;
+  fs.removeRecursiveSync = extraFs.removeSync;
 
   fs.walk = require('walk').walk;
 
