@@ -22,14 +22,5 @@
   "devDependencies": {
     "sequence": "~2.2.1"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/mit-license.php"
-    },
-    {
-      "type": "Apache License, Version 2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }
-  ]
+  "license": "(MIT OR Apache-2.0)"
 }
